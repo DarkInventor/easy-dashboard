@@ -96,7 +96,7 @@ const barChartConfig = {
   },
 } satisfies ChartConfig
 
-export function Dashboard() {
+export default function Dashboard() {
   const totalVisitors = React.useMemo(() => {
     return pieChartData.reduce((acc, curr) => acc + curr.visitors, 0)
   }, [])
@@ -104,7 +104,9 @@ export function Dashboard() {
   return (
     <div className="flex flex-col lg:flex-row flex-wrap gap-4 px-4 py-5 w-[94%] mx-auto">
          <div className='w-full lg:flex-1 min-w-[250px] max-w-auto lg:max-w-[200px]'>
-            <Sidebar />
+            <Sidebar setActiveTab={function (tab: string): void {
+          throw new Error('Function not implemented.');
+        } } />
             
          </div>
       {/* Area Chart */}
@@ -277,4 +279,3 @@ export function Dashboard() {
   )
 }
 
-export default Dashboard;
