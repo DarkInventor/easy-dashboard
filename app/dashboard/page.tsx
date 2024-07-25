@@ -393,9 +393,15 @@ export default function Dashboard() {
 
   return (
     <>
-     <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+      <div className="absolute inset-0 overflow-hidden">
+        {/* <div className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-indigo-700 rounded-full filter blur-[100px] opacity-30 animate-pulse"></div> */}
+        {/* <div className="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple-700 rounded-full filter blur-[100px] opacity-30 animate-pulse"></div> */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-full filter blur-[100px] animate-spin-slow"></div>
+      </div>  
+     <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 ">
         <DockDemo />        
       </div>
+    
       <motion.div 
         className="flex flex-col lg:flex-row flex-wrap gap-4 px-4 py-5 w-[94%] mx-auto"
         initial="hidden"
@@ -431,7 +437,7 @@ export default function Dashboard() {
         
           <Card className='border rounded-[7px]'>
             <CardHeader>
-              <CardTitle>Area Chart - Stacked</CardTitle>
+              <CardTitle>Total Visitors</CardTitle>
               <CardDescription>
                 Showing total visitors for the last 6 months
               </CardDescription>
@@ -502,7 +508,7 @@ export default function Dashboard() {
         >
           <Card className="border rounded-[7px]">
             <CardHeader className="items-center pb-0">
-              <CardTitle>Pie Chart - Donut with Text</CardTitle>
+              <CardTitle>Distribution</CardTitle>
               <CardDescription>January - June 2024</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 pb-0">
@@ -576,7 +582,7 @@ export default function Dashboard() {
         >
           <Card className='border rounded-[7px]'>
             <CardHeader>
-              <CardTitle>Bar Chart - Multiple</CardTitle>
+              <CardTitle>Dev</CardTitle>
               <CardDescription>January - June 2024</CardDescription>
             </CardHeader>
             <CardContent>

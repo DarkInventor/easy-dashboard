@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
+import { CalendarIcon, HomeIcon, MailIcon, PinIcon, PlusIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -63,29 +63,29 @@ const Icons = {
 
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Product" },
+    { href: "/#", icon: HomeIcon, label: "Home" },
+    { href: "#", icon: PlusIcon, label: "Upload Custom Data" },
   ],
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/DarkInventor/easy-ui",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/kathan-mehta-software-dev/",
         icon: Icons.linkedin,
       },
       X: {
         name: "X",
-        url: "#",
+        url: "https://x.com/kathanmehtaa",
         icon: Icons.x,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:ktmehta25@gmail.com",
         icon: Icons.email,
       },
     },
